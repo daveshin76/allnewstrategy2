@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLA 수능 영어 담화론 전략 — 재수생 완전 정복</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&family=IBM+Plex+Mono:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #fefcf7;
+  --paper2: #f5f0e8;
+  --paper3: #ede6d6;
+  --ink: #1a1410;
+  --ink2: #3d342a;
+  --ink3: #7a6f62;
+  --rule: #d0c4b0;
+  --rule2: #b8a890;
+
+  --red:    #b5232f;
+  --red-bg: #fdf2f2;
+  --red-bd: rgba(181,35,47,.2);
+
+  --teal:    #0b6b5a;
+  --teal-bg: #f0faf7;
+  --teal-bd: rgba(11,107,90,.2);
+
+  --blue:    #1a4a8c;
+  --blue-bg: #f0f4fc;
+  --blue-bd: rgba(26,74,140,.2);
+
+  --gold:    #7a5500;
+  --gold-bg: #fdf8ee;
+  --gold-bd: rgba(122,85,0,.2);
+
+  --violet:    #5530a0;
+  --violet-bg: #f5f0ff;
+  --violet-bd: rgba(85,48,160,.2);
+
+  --orange:    #8c3c0a;
+  --orange-bg: #fdf4ee;
+  --orange-bd: rgba(140,60,10,.2);
+
+  --green:    #2a6030;
+  --green-bg: #f0f9f2;
+  --green-bd: rgba(42,96,48,.2);
+}
+
+/* ── RESET & BASE ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #ccc0aa; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+/* ── A4 PAGE CONTAINER ── */
+.book {
+  max-width: 210mm;
+  margin: 0 auto;
+  background: var(--paper);
+}
+
+/* ── COVER PAGE ── */
+.cover {
+  min-height: 297mm;
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 50px;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,.04) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,.04) 40px);
+}
+.cover::after {
+  content: 'DISCOURSE';
+  position: absolute;
+  right: -40px;
+  bottom: 80px;
+  font-family: 'Playfair Display', serif;
+  font-size: 140px;
+  font-weight: 800;
+  color: rgba(255,255,255,.04);
+  letter-spacing: -4px;
+  pointer-events: none;
+  line-height: 1;
+}
+.cover-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #c8a96a;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cover-badge::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #c8a96a;
+}
+.cover-en {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.35);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.cover h1 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: clamp(34px, 6vw, 52px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.cover h1 em {
+  color: #c8a96a;
+  font-style: normal;
+  display: block;
+}
+.cover-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,.5);
+  line-height: 1.8;
+  max-width: 420px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+.cover-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
+}
+.cover-pill {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .5px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.6);
+}
+.cover-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  font-weight: 700;
+  color: rgba(255,255,255,.05);
+  position: absolute;
+  right: 50px;
+  top: 60px;
+  line-height: 1;
+}
+.cover-footer {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.2);
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── PAGE BREAK ── */
+.page {
+  min-height: 297mm;
+  padding: 50px 50px 60px;
+  border-top: 1px solid var(--rule);
+  position: relative;
+}
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
+}
+.page-chapter {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--ink3);
+  text-transform: uppercase;
+}
+.page-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  color: var(--ink3);
+}
+
+/* ── SECTION TITLE ── */
+.ch-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--ink3);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.ch-title {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.ch-title em {
+  color: var(--red);
+  font-style: normal;
+}
+.ch-sub {
+  font-size: 13px;
+  color: var(--ink3);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+/* ── IMPACT BOX ── */
+.impact {
+  background: var(--ink);
+  color: #fff;
+  border-radius: 4px;
+  padding: 22px 24px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.impact::before {
+  content: '"';
+  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  color: rgba(255,255,255,.06);
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  line-height: 1;
+}
+.impact p {
+  font-size: 15px;
+  line-height: 1.75;
+  position: relative;
+  z-index: 1;
+}
+.impact p b {
+  color: #c8a96a;
+}
+.impact-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.35);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* ── SECTION HEADING ── */
+.sec-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+.sec-head:first-child { margin-top: 0; }
+.sec-mark {
+  width: 3px;
+  height: 20px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.sec-title {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.sec-mono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--ink3);
+  margin-left: auto;
+}
+
+/* ── BODY TEXT ── */
+.body-text {
+  font-size: 13.5px;
+  color: var(--ink2);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+.body-text b { color: var(--ink); font-weight: 700; }
+
+/* ── RULE LINE ── */
+.rule { height: 1px; background: var(--rule); margin: 24px 0; }
+
+/* ── TABLE ── */
+.tbl-wrap { overflow-x: auto; margin-bottom: 24px; }
+table.main {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+table.main th {
+  background: var(--ink);
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+table.main td {
+  background: var(--paper2);
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+  line-height: 1.65;
+  color: var(--ink2);
+}
+table.main tr:hover td { background: var(--paper3); }
+table.main .cell-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  font-size: 11.5px;
+  color: var(--ink);
+}
+table.main .cell-ko {
+  font-size: 11px;
+  color: var(--ink3);
+}
+table.main .group-row td {
+  background: var(--paper3);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--ink3);
+  padding: 7px 14px;
+  text-transform: uppercase;
+}
+
+/* ── CARD GRID ── */
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+.cards.cols3 { grid-template-columns: 1fr 1fr 1fr; }
+.card {
+  background: var(--paper2);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 16px;
+}
+.card.full { grid-column: 1 / -1; }
+.card-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+  opacity: .35;
+}
+.card-title {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.card-body {
+  font-size: 12.5px;
+  color: var(--ink2);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.card-ex {
+  background: var(--paper);
+  border-left: 3px solid var(--rule2);
+  padding: 10px 12px;
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: var(--ink2);
+  border-radius: 0 3px 3px 0;
+}
+.card-note {
+  font-size: 11px;
+  color: var(--ink3);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* ── HIGHLIGHT INLINE ── */
+.hl { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; padding: 1px 6px; border-radius: 2px; }
+.hl-r { color: var(--red);    background: var(--red-bg);    border: 1px solid var(--red-bd); }
+.hl-t { color: var(--teal);   background: var(--teal-bg);   border: 1px solid var(--teal-bd); }
+.hl-b { color: var(--blue);   background: var(--blue-bg);   border: 1px solid var(--blue-bd); }
+.hl-g { color: var(--gold);   background: var(--gold-bg);   border: 1px solid var(--gold-bd); }
+.hl-v { color: var(--violet); background: var(--violet-bg); border: 1px solid var(--violet-bd); }
+.hl-o { color: var(--orange); background: var(--orange-bg); border: 1px solid var(--orange-bd); }
+.hl-gr { color: var(--green); background: var(--green-bg);  border: 1px solid var(--green-bd); }
+
+/* ── CALLOUT BOXES ── */
+.callout {
+  border-radius: 4px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  line-height: 1.75;
+}
+.callout.warn {
+  background: var(--red-bg);
+  border: 1px solid var(--red-bd);
+  border-left: 4px solid var(--red);
+}
+.callout.warn b { color: var(--red); }
+.callout.tip {
+  background: var(--teal-bg);
+  border: 1px solid var(--teal-bd);
+  border-left: 4px solid var(--teal);
+}
+.callout.tip b { color: var(--teal); }
+.callout.key {
+  background: var(--gold-bg);
+  border: 1px solid var(--gold-bd);
+  border-left: 4px solid var(--gold);
+}
+.callout.key b { color: var(--gold); }
+
+/* ── PASSAGE BOX ── */
+.passage {
+  background: var(--paper2);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.passage-head {
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.passage-head-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.5);
+  text-transform: uppercase;
+}
+.passage-head-title {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+.passage-body {
+  padding: 18px 18px 14px;
+}
+.passage-text {
+  font-size: 13.5px;
+  line-height: 2.1;
+  color: var(--ink2);
+  margin-bottom: 14px;
+}
+.passage-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+}
+.pl {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  line-height: 1.4;
+}
+
+/* ── FLOW DIAGRAM ── */
+.flow {
+  background: var(--paper2);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 18px;
+  margin-bottom: 24px;
+}
+.flow-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--ink3);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.flow-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 12px;
+}
+.flow-row:last-child { margin-bottom: 0; }
+.flow-box {
+  background: var(--paper);
+  border: 1px solid var(--rule2);
+  border-radius: 3px;
+  padding: 8px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.flow-box.accent {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+.flow-box.red-box   { background: var(--red-bg);    border-color: var(--red-bd);    color: var(--red); }
+.flow-box.teal-box  { background: var(--teal-bg);   border-color: var(--teal-bd);   color: var(--teal); }
+.flow-arrow { padding: 0 10px; color: var(--ink3); font-size: 14px; }
+.flow-note { font-size: 11px; color: var(--ink3); font-style: italic; padding-left: 8px; flex: 1 0 100%; margin-top: 4px; }
+
+/* ── CHECKLIST ── */
+.checklist {
+  background: var(--paper2);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+.check-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--ink3);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.check-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.65;
+}
+.check-item:last-child { border-bottom: none; padding-bottom: 0; }
+.check-n {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--gold);
+  line-height: 1;
+  min-width: 22px;
+  font-weight: 700;
+}
+.check-note {
+  display: block;
+  font-size: 11.5px;
+  color: var(--ink3);
+  margin-top: 3px;
+  font-style: italic;
+}
+
+/* ── MATRIX ── */
+.matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+.mx {
+  background: var(--paper2);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 14px 15px;
+}
+.mx-title {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.mx-ko { font-size: 10px; color: var(--ink3); margin-bottom: 10px; }
+.mx-body { font-size: 12px; line-height: 1.8; color: var(--ink2); }
+
+/* ── FINAL TABLE ── */
+table.final {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+table.final th {
+  background: var(--ink);
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 12px;
+  text-align: left;
+}
+table.final td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper2);
+  vertical-align: top;
+  line-height: 1.65;
+}
+
+/* ── PART BAND ── */
+.part-band {
+  background: var(--ink);
+  color: #fff;
+  margin: 0 -50px;
+  padding: 16px 50px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.part-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(255,255,255,.15);
+  flex-shrink: 0;
+}
+.part-info { flex: 1; }
+.part-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #c8a96a;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.part-name {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+.part-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,.5);
+  margin-top: 3px;
+}
+
+/* ── STEP NUMBERS ── */
+.steps { counter-reset: step; margin-bottom: 24px; }
+.step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.step:last-child { border-bottom: none; }
+.step-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--rule2);
+  line-height: 1;
+  min-width: 36px;
+  flex-shrink: 0;
+}
+.step-body { font-size: 13px; color: var(--ink2); line-height: 1.75; }
+.step-body b { color: var(--ink); }
+.step-sub {
+  display: block;
+  font-size: 11.5px;
+  color: var(--ink3);
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* ── FOOTER STRIP ── */
+.page-footer {
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pf-left {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--ink3);
+  text-transform: uppercase;
+}
+.pf-right {
+  font-family: 'Playfair Display', serif;
+  font-size: 12px;
+  color: var(--ink3);
+}
+
+/* ── DIVIDER ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, var(--rule2), transparent);
+  margin: 28px 0;
+}
+
+/* ── BADGE ── */
+.badge {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* ── PRINT ── */
+@media print {
+  html { background: white; }
+  .page { page-break-inside: avoid; }
+}
+
+@media (max-width: 700px) {
+  .page { padding: 30px 20px 40px; }
+  .cards { grid-template-columns: 1fr; }
+  .matrix { grid-template-columns: 1fr; }
+  .part-band { margin: 0 -20px; padding: 14px 20px; }
+  .cover { padding: 40px 24px; }
+  .cover h1 { font-size: 30px; }
+  .cover::after { font-size: 80px; }
+}
+</style>
+</head>
+<body>
+<div class="book">
+
+<!-- ══════════ 표지 ══════════ -->
+<div class="cover">
+  <div class="cover-num">PLA</div>
+  <div class="cover-badge">PLA · PHILLIPS LEADERS ACADEMY</div>
+  <div class="cover-en">수능 영어 독해 전략 완전 정복</div>
+  <h1>
+    담화론으로 <em>수능 영어<br>다 잡는다</em>
+  </h1>
+  <p class="cover-sub">
+    단어 몰라도 된다. 구조만 읽어라.<br>
+    재수생을 위한 최종 전략 바이블 —<br>
+    주제·요지·제목·빈칸·순서·삽입 전 유형 완벽 적용
+  </p>
+  <div class="cover-pills">
+    <span class="cover-pill">PART 01 · 개요</span>
+    <span class="cover-pill">PART 02 · 주제·요지·주장</span>
+    <span class="cover-pill">PART 03 · 제목</span>
+    <span class="cover-pill">PART 04 · 빈칸 추론</span>
+    <span class="cover-pill">PART 05 · 순서 배열</span>
+    <span class="cover-pill">PART 06 · 문장 삽입</span>
+    <span class="cover-pill">PART 07 · 통합 체크리스트</span>
+  </div>
+  <div class="cover-footer">PLA SUNEUNG STRATEGY GUIDE · DISCOURSE-BASED READING · ALL TYPES COVERED</div>
+</div>
+
+
+<!-- ══════════ PART 01 : 개요 ══════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-chapter">PART 01 · 담화론 개요</span>
+    <span class="page-num">01</span>
+  </div>
+
+  <div class="part-band">
+    <div class="part-num">01</div>
+    <div class="part-info">
+      <div class="part-tag">개요 · Overview</div>
+      <div class="part-name">담화론이 뭔데, 이게 왜 수능에서 먹히냐?</div>
+      <div class="part-desc">이 파트를 먼저 읽어야 나머지 전략이 제대로 이해된다</div>
+    </div>
+  </div>
+
+  <div class="impact">
+    <div class="impact-label">핵심 전제 — 이걸 모르면 전략이 안 먹힌다</div>
+    <p>
+      수능 영어는 <b>"영어 실력"을 시험하는 게 아니다.</b> 진짜로. 모르는 단어가 20개 있어도 정답을 맞힐 수 있다.
+      수능이 실제로 측정하는 건 <b>"텍스트 구조를 읽는 능력"</b>이다. 글의 뼈대, 즉 담화 구조만 정확히 파악하면
+      내용을 절반도 이해 못 했어도 정답을 논리적으로 찾을 수 있다. 이게 PLA 담화론 접근법의 핵심이다.
+    </p>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--teal)"></div>
+    <div class="sec-title">담화론이 뭔지 3줄 요약</div>
+  </div>
+  <p class="body-text">
+    담화론(Discourse Theory)은 '단어·문장 하나하나'가 아니라 <b>텍스트 전체가 어떻게 연결되는지</b>를 연구하는 언어학이다.
+    핵심은 세 가지다: ① 문장끼리 어떻게 이어지는가(결속 장치), ② 필자가 독자에게 어떤 신호를 보내는가(메타담화 표지),
+    ③ 글이 어떤 구조로 쌓이는가(담화 구조). 이 세 가지가 수능 문제 유형에 <b>1:1로 대응</b>된다.
+  </p>
+
+  <div class="rule"></div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--blue)"></div>
+    <div class="sec-title">담화론 핵심 도구 — 수능 직결 빠른 참조</div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="main">
+      <thead>
+        <tr>
+          <th style="width:22%">도구</th>
+          <th style="width:28%">수능에서 어떻게 보이냐</th>
+          <th style="width:28%">어디서 쓰이냐</th>
+          <th>핵심 신호 예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="group-row"><td colspan="4">▸ 지시어 · Shell Noun — 결속의 핵심</td></tr>
+        <tr>
+          <td><span class="cell-label">this + Shell Noun</span><div class="cell-ko">앞 내용을 캡슐화 + 평가</div></td>
+          <td>앞 내용을 한 단어로 묶어 필자의 평가를 드러냄</td>
+          <td>주제·요지·제목·빈칸</td>
+          <td><span class="hl hl-t">This problem</span> / <span class="hl hl-t">This shift</span> / <span class="hl hl-t">This insight</span></td>
+        </tr>
+        <tr>
+          <td><span class="cell-label">that + Shell Noun</span><div class="cell-ko">심리적 거리 = 비판</div></td>
+          <td>필자가 반박하려는 남의 입장에 'that'을 붙임</td>
+          <td>주장·빈칸</td>
+          <td><span class="hl hl-r">That view</span> / <span class="hl hl-r">That assumption</span></td>
+        </tr>
+        <tr>
+          <td><span class="cell-label">the (2nd mention)</span><div class="cell-ko">앞서 나온 명사를 다시 받음</div></td>
+          <td>the가 처음 나오면 반드시 a/an 도입이 앞에 있음</td>
+          <td>순서·삽입</td>
+          <td>a dog → <span class="hl hl-b">the dog</span></td>
+        </tr>
+        <tr class="group-row"><td colspan="4">▸ 연결사 — 논리 방향 표시</td></tr>
+        <tr>
+          <td><span class="cell-label">대조</span></td>
+          <td>전환 이후가 핵심 주장일 가능성 높음</td>
+          <td>주제·주장·빈칸</td>
+          <td><span class="hl hl-r">However</span> / <span class="hl hl-r">Yet</span> / <span class="hl hl-r">But</span></td>
+        </tr>
+        <tr>
+          <td><span class="cell-label">인과·결론</span></td>
+          <td>결론 위치 = 요지·주제 위치</td>
+          <td>주제·요지·빈칸</td>
+          <td><span class="hl hl-t">Therefore</span> / <span class="hl hl-t">Thus</span> / <span class="hl hl-t">Hence</span></td>
+        </tr>
+        <tr>
+          <td><span class="cell-label">예시</span></td>
+          <td>예시 이전의 일반 진술이 핵심</td>
+          <td>순서·삽입·빈칸</td>
+          <td><span class="hl hl-g">For example</span> / <span class="hl hl-g">For instance</span></td>
+        </tr>
+        <tr>
+          <td><span class="cell-label">양보</span></td>
+          <td>Although A, <b>B</b> → 핵심은 B</td>
+          <td>주제·주장·순서</td>
+          <td><span class="hl hl-v">Although</span> / <span class="hl hl-v">While</span> / <span class="hl hl-v">Admittedly</span></td>
+        </tr>
+        <tr class="group-row"><td colspan="4">▸ 메타담화 표지 (Hyland 2005) — 필자의 목소리</td></tr>
+        <tr>
+          <td><span class="cell-label">Boosters</span><div class="cell-ko">강화 표지</div></td>
+          <td>이 단어가 붙은 문장 = 핵심 주장 1순위 후보</td>
+          <td>주제·주장·제목</td>
+          <td><span class="hl hl-t">clearly</span> / <span class="hl hl-t">certainly</span> / <span class="hl hl-t">must</span> / <span class="hl hl-t">indeed</span></td>
+        </tr>
+        <tr>
+          <td><span class="cell-label">Hedges</span><div class="cell-ko">완화 표지</div></td>
+          <td>조심스러운 주장, 확신을 낮춤</td>
+          <td>주장·빈칸</td>
+          <td><span class="hl hl-g">may</span> / <span class="hl hl-g">might</span> / <span class="hl hl-g">seem</span> / <span class="hl hl-g">suggest</span></td>
+        </tr>
+        <tr>
+          <td><span class="cell-label">Attitude Markers</span><div class="cell-ko">태도 표지</div></td>
+          <td>필자의 감정·평가 → 주장 방향</td>
+          <td>주장·제목</td>
+          <td><span class="hl hl-v">unfortunately</span> / <span class="hl hl-v">importantly</span> / <span class="hl hl-v">surprisingly</span></td>
+        </tr>
+        <tr>
+          <td><span class="cell-label">Engagement Markers</span><div class="cell-ko">독자 관여</div></td>
+          <td>다음에 오는 내용이 핵심이라는 신호</td>
+          <td>빈칸·주제</td>
+          <td><span class="hl hl-gr">Note that</span> / <span class="hl hl-gr">Consider</span> / <span class="hl hl-gr">What is crucial</span></td>
+        </tr>
+        <tr>
+          <td><span class="cell-label">Frame Markers</span><div class="cell-ko">담화 구조 표지</div></td>
+          <td>단락 순서·방향 명시 안내</td>
+          <td>순서·삽입</td>
+          <td><span class="hl hl-b">First</span> / <span class="hl hl-b">Second</span> / <span class="hl hl-b">Finally</span> / <span class="hl hl-b">Turning to</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout tip">
+    <b>한 줄 요약:</b> 수능 영어는 이 표에 있는 신호들을 찾는 게임이다. 지문을 "이해"하려고 읽지 말고, 이 표지들을 "탐색"하면서 읽어라. 완전히 다른 독해가 시작된다.
+  </div>
+
+  <div class="page-footer">
+    <span class="pf-left">PLA · 수능 영어 담화론 전략</span>
+    <span class="pf-right">01</span>
+  </div>
+</div>
+
+
+<!-- ══════════ PART 02 : 주제·요지·주장 ══════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-chapter">PART 02 · 주제·요지·주장</span>
+    <span class="page-num">02</span>
+  </div>
+
+  <div class="part-band">
+    <div class="part-num">02</div>
+    <div class="part-info">
+      <div class="part-tag">Topic · Main Idea · Argument</div>
+      <div class="part-name">주제·요지·주장 — 신호만 찾으면 끝난다</div>
+      <div class="part-desc">세 유형 모두 "필자가 가장 말하고 싶은 게 뭔지" 찾는 문제</div>
+    </div>
+  </div>
+
+  <p class="body-text">
+    <b>주제</b>는 가장 포괄적·추상적 개념, <b>요지</b>는 핵심 명제 한두 문장, <b>주장</b>은 독자에게 권고하는 행동·방향.
+    유형 이름이 달라도 푸는 방법은 같다. 아래 신호 중 하나만 발견해도 그 문장이 정답이다.
+  </p>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--blue)"></div>
+    <div class="sec-title">핵심 주장 위치 — 3가지 패턴</div>
+  </div>
+
+  <div class="flow">
+    <div class="flow-label">▸ 수능에서 주장이 나오는 위치 패턴</div>
+    <div class="flow-row">
+      <div class="flow-box teal-box">주제문 (첫 문장)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">근거 1</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">근거 2 / 예시</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">재확인</div>
+      <div class="flow-note">연역형 — 수능에서 가장 자주 나옴. 첫 문장이 주제문일 때 확인할 것</div>
+    </div>
+    <div class="flow-row" style="margin-top:10px">
+      <div class="flow-box">배경·문제 제시</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">근거·분석</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box teal-box">결론 = 주제 (마지막)</div>
+      <div class="flow-note">귀납형 — 마지막 문장이 주제. Therefore / All of this 확인</div>
+    </div>
+    <div class="flow-row" style="margin-top:10px">
+      <div class="flow-box">일반 진술 A</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box red-box">However / But</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box accent">핵심 주장</div>
+      <div class="flow-note">역접형 — However 이후가 핵심. A에 낚이면 오답</div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--blue)"></div>
+    <div class="sec-title">주제·요지 탐지 7가지 신호</div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-num" style="color:var(--teal)">①</div>
+      <div class="card-title">결론 연결사 <span class="badge" style="background:var(--teal-bg);color:var(--teal);border:1px solid var(--teal-bd)">가장 확실한 신호</span></div>
+      <div class="card-body">이 단어가 있는 문장이 주제·요지. 있으면 다른 거 볼 것도 없다. 없으면 다른 신호를 탐색한다.</div>
+      <div class="card-ex">
+        <span class="hl hl-t">Therefore / Thus / Hence / In short / In sum</span><br>
+        <span class="hl hl-t">All of this suggests / The lesson is / It follows that</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--red)">②</div>
+      <div class="card-title">역접 이후 문장 <span class="badge" style="background:var(--red-bg);color:var(--red);border:1px solid var(--red-bd)">수능 최다 패턴</span></div>
+      <div class="card-body">However 앞 내용은 "반론 인정"이지 필자 주장이 아니다. However 뒤가 진짜 주장이다.</div>
+      <div class="card-ex">
+        Technology offers convenience. <span class="hl hl-r">However</span>, it fundamentally erodes human connection.
+        <div class="card-note">↑ "erodes human connection" = 핵심 주장</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--blue)">③</div>
+      <div class="card-title">Boosters가 붙은 문장</div>
+      <div class="card-body">필자가 "이건 확실해!"라고 강조하는 것. 이 표지가 붙은 문장 = 주장·요지 1순위 후보.</div>
+      <div class="card-ex">
+        <span class="hl hl-t">Clearly</span>, access to education determines life outcomes more than natural ability.
+        <div class="card-note">↑ clearly가 있으면 이 문장이 주제문 후보</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--gold)">④</div>
+      <div class="card-title">This + Shell Noun 패턴</div>
+      <div class="card-body">Shell Noun의 평가 방향이 필자의 입장: <b>problem</b> = 부정, <b>insight</b> = 긍정, <b>shift</b> = 중립. 이 단어 하나가 주제의 방향을 알려준다.</div>
+      <div class="card-ex">
+        Rates are rising. Staff are leaving. <span class="hl hl-g">This crisis</span> demands immediate action.
+        <div class="card-note">↑ "crisis" = 부정 평가 → 주장 방향 = 해결책 요구</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--violet)">⑤</div>
+      <div class="card-title">Attitude Markers</div>
+      <div class="card-body">필자의 감정이 드러나는 단어. 이 단어가 붙은 문장이 필자가 가장 강조하는 내용이다.</div>
+      <div class="card-ex">
+        <span class="hl hl-v">Importantly</span>, the solution lies not in technology but in social policy.
+        <div class="card-note">↑ "importantly" = 뒤 내용이 핵심 주장</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--teal)">⑥</div>
+      <div class="card-title">"All of this" 누적 지시</div>
+      <div class="card-body">앞에 나온 근거들을 한꺼번에 묶어 결론으로 향하는 구조. 이 패턴 다음이 요지.</div>
+      <div class="card-ex">
+        <span class="hl hl-t">All of this</span> points to one conclusion: urban design shapes behaviour.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--orange)">⑦</div>
+      <div class="card-title">Engagement Markers 직후</div>
+      <div class="card-body">"여기 봐!" 신호. 이 표지 바로 다음 문장이 필자가 가장 강조하는 내용이다.</div>
+      <div class="card-ex">
+        <span class="hl hl-o">What is crucial</span> is that success depends not on effort alone but on context.
+        <div class="card-note">↑ "what is crucial" 이후 = 핵심 주장</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--red)">⚠</div>
+      <div class="card-title">오답 함정 3가지 — 반드시 기억</div>
+      <div class="card-body">이 세 가지가 수능에서 가장 많이 틀리는 패턴이다.</div>
+      <div class="card-ex">
+        <b>① For example로 시작하는 문장</b> = 예시, 요지 아님<br>
+        <b>② Although 뒤 종속절</b> = 양보, 주장 아님 (주절이 주장)<br>
+        <b>③ That view / That assumption</b> = 필자가 비판하는 남의 입장
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--blue)"></div>
+    <div class="sec-title">실전 지문 분석 — 신호 발견 연습</div>
+  </div>
+
+  <div class="passage">
+    <div class="passage-head">
+      <span class="passage-head-label">실전 예시 지문</span>
+      <span class="passage-head-title">주제·요지 탐지 실습</span>
+    </div>
+    <div class="passage-body">
+      <p class="passage-text">
+        Many educators believe that introducing digital tools in early childhood inevitably enhances learning outcomes.
+        <span class="hl hl-r">That belief</span>, however, is increasingly challenged by longitudinal studies.
+        Children who relied heavily on screens before age six showed measurably weaker executive function and attention spans than peers with limited exposure.
+        <span class="hl hl-g">This gap</span> persisted even after controlling for socioeconomic variables.
+        <span class="hl hl-r">What these findings suggest</span> is not that technology is inherently harmful, but that timing matters profoundly.
+        <span class="hl hl-t">Clearly</span>, the uncritical adoption of digital tools in early education — without developmental appropriateness — risks undermining the very outcomes it aims to improve.
+      </p>
+      <div class="passage-legend">
+        <span class="pl" style="background:var(--red-bg);color:var(--red);border:1px solid var(--red-bd)">■ "That belief" = that → 비판 대상 (믿음이 반박됨)</span>
+        <span class="pl" style="background:var(--gold-bg);color:var(--gold);border:1px solid var(--gold-bd)">■ "This gap" = Shell Noun → 부정 평가로 캡슐화</span>
+        <span class="pl" style="background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-bd)">■ "Clearly" = Booster → 마지막 문장이 핵심 주장</span>
+        <span class="pl" style="background:var(--teal-bg);color:var(--teal);border:1px solid var(--teal-bd)">■ 핵심 주장: 발달 적합성 없는 디지털 도구 무비판적 도입 = 역효과</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="pf-left">PLA · 수능 영어 담화론 전략</span>
+    <span class="pf-right">02</span>
+  </div>
+</div>
+
+
+<!-- ══════════ PART 03 : 제목 ══════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-chapter">PART 03 · 제목</span>
+    <span class="page-num">03</span>
+  </div>
+
+  <div class="part-band">
+    <div class="part-num">03</div>
+    <div class="part-info">
+      <div class="part-tag">Title</div>
+      <div class="part-name">제목 — 주제문을 압축하되 어조까지 맞춰라</div>
+      <div class="part-desc">내용이 맞아도 어조가 틀리면 오답이 되는 유형</div>
+    </div>
+  </div>
+
+  <p class="body-text">
+    제목 문제는 주제문을 찾는 것에서 끝나지 않는다. 필자가 그 주제를 <b>어떤 감정·어조</b>로 쓰고 있는지까지 맞춰야 한다.
+    Shell Noun의 평가 방향(긍정/부정)과 Attitude Marker의 감정 색조가 제목 선택의 마지막 기준이다.
+  </p>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--red)"></div>
+    <div class="sec-title">제목 찾기 3단계</div>
+  </div>
+
+  <div class="checklist">
+    <div class="check-label">▸ 이 순서대로만 하면 제목 절대 틀리지 않는다</div>
+    <div class="check-item">
+      <span class="check-n">1</span>
+      <div>
+        <b>주제문 먼저 확정</b> — Part 02 방법대로 핵심 명제 문장을 찾는다.
+        <span class="check-note">결론 연결사 · 역접 이후 · Booster 문장 순서로 확인</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-n">2</span>
+      <div>
+        <b>Shell Noun 평가 방향 확인</b> — "This problem/shift/insight" 중 어느 방향?
+        <span class="check-note">problem / challenge / barrier = 비판 어조 / insight / achievement = 긍정 어조</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-n">3</span>
+      <div>
+        <b>Attitude Marker로 감정 확인</b> — unfortunately / surprisingly / importantly 방향이 제목의 어조
+        <span class="check-note">비유적 제목은 주제문의 핵심 개념어를 변형한 것 — 핵심 개념어를 찾아라</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--red)"></div>
+    <div class="sec-title">수능에 자주 나오는 제목 패턴 4가지</div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-title">의문문 제목</div>
+      <div class="card-body">지문이 특정 현상의 원인·이유를 분석하거나 방법론을 제시할 때 나온다.</div>
+      <div class="card-ex">Why Does Early Screen Time Harm Development?
+        <div class="card-note">↑ 지문 = 스크린 시간이 발달에 미치는 부정적 영향 분석</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">역설·아이러니 제목</div>
+      <div class="card-body">일반적 예상을 뒤집는 지문. "surprisingly"가 있으면 이 패턴 의심.</div>
+      <div class="card-ex">The More We Connect, the More Isolated We Become
+        <div class="card-note">↑ 기술 발전 → 연결 증가 ↔ 실제 고립감 증가의 역설</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">명령·권고형 제목</div>
+      <div class="card-body">행동 변화를 촉구하는 지문. Engagement Marker가 많은 지문에서 빈번.</div>
+      <div class="card-ex">Beyond Convenience: Rethinking Digital Tools in Early Childhood
+        <div class="card-note">↑ 편의성 너머를 봐라 = 비판적 재검토 촉구</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">명사구 제목 (가장 일반적)</div>
+      <div class="card-body">핵심 Shell Noun + 주제어 결합. 분석적 지문에서 가장 자주 나온다.</div>
+      <div class="card-ex">The Hidden Costs of Uncritical Technology Adoption
+        <div class="card-note">↑ "hidden costs" = Shell Noun의 부정 평가 방향 반영</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--red)"></div>
+    <div class="sec-title">제목 오답 함정 — 이거 모르면 무조건 틀린다</div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="main">
+      <thead>
+        <tr><th>오답 유형</th><th>왜 틀리냐</th><th>어떻게 막냐</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="cell-label" style="color:var(--red)">예시를 제목으로</span></td>
+          <td>for example 이하 구체 사례가 제목이 됨</td>
+          <td>제목 후보에 특정 수치·사례가 있으면 무조건 탈락. 제목은 추상·포괄적이어야</td>
+        </tr>
+        <tr>
+          <td><span class="cell-label" style="color:var(--red)">범위 과대 일반화</span></td>
+          <td>지문 주제보다 훨씬 넓은 제목 선택</td>
+          <td>Shell Noun이 제목에 포함되거나 환언되어야 함</td>
+        </tr>
+        <tr>
+          <td><span class="cell-label" style="color:var(--red)">어조 불일치</span></td>
+          <td>비판 지문인데 긍정적 제목 고름</td>
+          <td>Attitude Marker·Shell Noun의 방향 확인. 필자 비판 → 제목도 비판적</td>
+        </tr>
+        <tr>
+          <td><span class="cell-label" style="color:var(--red)">반박 대상이 제목으로</span></td>
+          <td>"That view" — 필자가 비판하는 입장을 주장으로 오인</td>
+          <td>그 view를 반박한 Booster 문장이 실제 주장 → 제목 근거</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="page-footer">
+    <span class="pf-left">PLA · 수능 영어 담화론 전략</span>
+    <span class="pf-right">03</span>
+  </div>
+</div>
+
+
+<!-- ══════════ PART 04 : 빈칸 추론 ══════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-chapter">PART 04 · 빈칸 추론</span>
+    <span class="page-num">04</span>
+  </div>
+
+  <div class="part-band">
+    <div class="part-num">04</div>
+    <div class="part-info">
+      <div class="part-tag">Gap-fill Inference</div>
+      <div class="part-name">빈칸 추론 — 내용이 아니라 논리 방향을 채워라</div>
+      <div class="part-desc">수능 최고 난도. 하지만 공식이 있다</div>
+    </div>
+  </div>
+
+  <div class="impact">
+    <div class="impact-label">재수생이 꼭 알아야 할 핵심 관점 전환</div>
+    <p>
+      빈칸 추론을 틀리는 학생들의 공통점: <b>"내용을 추론"하려 한다.</b> 틀렸다.
+      빈칸 정답은 내용 추론이 아니라 <b>"논리적 위치 추론"</b>이다.
+      빈칸 전후의 연결사·지시어·Shell Noun이 정답의 논리 방향을 100% 결정한다.
+      단어를 몰라도 구조로 풀 수 있다.
+    </p>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--gold)"></div>
+    <div class="sec-title">빈칸 앞뒤 신호 → 논리 방향 결정표</div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="main">
+      <thead>
+        <tr><th>빈칸 전후 신호</th><th>빈칸에 들어갈 내용의 방향</th><th>예시</th></tr>
+      </thead>
+      <tbody>
+        <tr class="group-row"><td colspan="3">▸ 빈칸 바로 앞 연결사가 있을 때</td></tr>
+        <tr>
+          <td><span class="hl hl-r">However / But / Yet</span></td>
+          <td style="color:var(--red);font-weight:600">앞 내용의 반대 개념</td>
+          <td>앞: "기술은 효율을 높인다" → 빈칸: <u>인간 연결을 약화시킨다</u></td>
+        </tr>
+        <tr>
+          <td><span class="hl hl-t">Therefore / Thus / Hence</span></td>
+          <td style="color:var(--teal);font-weight:600">앞 근거들의 논리적 결론</td>
+          <td>앞: 부정적 효과 여러 개 나열 → 빈칸: <u>시스템은 지속 불가능하다</u></td>
+        </tr>
+        <tr>
+          <td><span class="hl hl-b">Similarly / Likewise</span></td>
+          <td style="color:var(--blue);font-weight:600">같은 방향의 다른 예</td>
+          <td>앞: A가 X를 한다 → 빈칸: <u>B도 다른 영역에서 X를 한다</u></td>
+        </tr>
+        <tr>
+          <td><span class="hl hl-g">For example / Specifically</span></td>
+          <td style="color:var(--gold);font-weight:600">앞 일반 진술의 구체 사례</td>
+          <td>빈칸이 앞이면 포괄적 주장 / 빈칸이 뒤면 구체 사례</td>
+        </tr>
+        <tr>
+          <td><span class="hl hl-v">Although + 빈칸</span></td>
+          <td style="color:var(--violet);font-weight:600">주절의 반대 방향</td>
+          <td>Although [빈칸], 결과는 긍정적 → 빈칸 = 부정적 조건</td>
+        </tr>
+        <tr class="group-row"><td colspan="3">▸ 빈칸 위치로 판단할 때</td></tr>
+        <tr>
+          <td>빈칸이 <b>첫 문장</b></td>
+          <td>지문 전체를 포괄하는 가장 추상적 진술</td>
+          <td>이후 모든 문장이 이 빈칸의 근거·예시가 됨</td>
+        </tr>
+        <tr>
+          <td>빈칸 바로 뒤에 <span class="hl hl-g">for example</span></td>
+          <td>빈칸 = 일반 진술 (예시로 구체화될 내용)</td>
+          <td>예시가 설명하는 일반 개념을 찾아야 함</td>
+        </tr>
+        <tr>
+          <td>빈칸이 <span class="hl hl-g">this + Shell Noun</span> 자리</td>
+          <td>앞 내용 전체를 Shell Noun으로 캡슐화</td>
+          <td>앞 내용의 핵심을 한 단어로 평가하는 명사 선택</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--gold)"></div>
+    <div class="sec-title">빈칸 오답 함정 — 절대 낚이지 마라</div>
+  </div>
+
+  <div class="callout warn">
+    <b>함정 ①: 지문 단어 그대로 있는 선지</b> — 지문의 핵심 단어를 그대로 복사한 선지는 90% 오답이다. 수능은 의미를 환언(paraphrase)해서 정답을 만든다.
+  </div>
+  <div class="callout warn">
+    <b>함정 ②: 내용은 그럴듯한데 논리 방향이 반대인 선지</b> — 선지를 넣었을 때 앞뒤 연결사의 논리가 성립하는지 반드시 검증해라.
+  </div>
+  <div class="callout warn">
+    <b>함정 ③: 양보절 내용 선택</b> — Although 뒤 종속절 내용을 빈칸에 넣으면 주절과 방향이 반대가 된다. 항상 주절 방향으로.
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--gold)"></div>
+    <div class="sec-title">빈칸 풀이 순서 — 4단계</div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <b>빈칸 위치 파악:</b> 빈칸이 문장에서 어떤 문법적 자리인지, 어떤 단어 뒤에 오는지 확인.
+        <span class="step-sub">명사 자리 / 형용사 자리 / 문장 전체가 빈칸인지 구분</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <b>빈칸 바로 앞 연결사 확인:</b> 이 한 단어가 정답의 논리 방향을 결정한다.
+        <span class="step-sub">위의 결정표를 기억하고 방향을 먼저 설정할 것</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <b>빈칸 이후 for example 확인:</b> 있으면 빈칸 = 일반 진술. 예시가 구체화하는 개념을 찾는다.
+        <span class="step-sub">예시의 공통 속성 = 빈칸에 들어갈 일반 개념</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <b>선지 대입 후 앞뒤 논리 검증:</b> 후보 선지를 넣어보고 앞뒤 연결사의 논리가 모두 성립하는지 확인.
+        <span class="step-sub">하나라도 어색하면 오답. 지문 단어 반복 선지는 우선 의심</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="pf-left">PLA · 수능 영어 담화론 전략</span>
+    <span class="pf-right">04</span>
+  </div>
+</div>
+
+
+<!-- ══════════ PART 05 : 순서 배열 ══════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-chapter">PART 05 · 순서 배열</span>
+    <span class="page-num">05</span>
+  </div>
+
+  <div class="part-band">
+    <div class="part-num">05</div>
+    <div class="part-info">
+      <div class="part-tag">Paragraph Ordering</div>
+      <div class="part-name">순서 배열 — 내용 말고 결속 쌍을 찾아라</div>
+      <div class="part-desc">지시어와 관사 하나가 순서를 결정한다</div>
+    </div>
+  </div>
+
+  <p class="body-text">
+    순서 배열 문제에서 가장 많이 틀리는 이유: <b>"내용이 비슷하면 인접한다"고 착각하는 것.</b>
+    아무리 내용이 비슷해도 결속 장치(지시어·the·연결사)가 없으면 인접하지 않는다.
+    반대로, 내용이 달라보여도 결속 쌍이 성립하면 반드시 인접한다.
+  </p>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--violet)"></div>
+    <div class="sec-title">순서를 결정하는 5가지 결속 장치</div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-num" style="color:var(--teal)">①</div>
+      <div class="card-title">a/an → the (2nd mention)</div>
+      <div class="card-body">가장 강력한 순서 결정 도구. 처음엔 "a dog"으로 소개, 다음에 "the dog"으로 다시 받는다. 이 쌍이 성립하면 인접 단락 확정.</div>
+      <div class="card-ex">
+        단락 A: "A researcher developed <span class="hl hl-t">a novel algorithm</span>."<br>
+        단락 B: "<span class="hl hl-t">The algorithm</span> processed data 100× faster."
+        <div class="card-note">↑ a → the 쌍 = A 다음 B 확정</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--blue)">②</div>
+      <div class="card-title">지시어 this/that → 선행사</div>
+      <div class="card-body">단락이 this / that / these로 시작하면, 그 지시어의 선행사가 있는 단락 바로 뒤에 위치해야 한다.</div>
+      <div class="card-ex">
+        단락 C: "<span class="hl hl-b">This approach</span> proved more effective than expected."<br>
+        → 단락 C 앞 = 그 approach를 소개하는 단락
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--gold)">③</div>
+      <div class="card-title">Frame Markers 순서 표지</div>
+      <div class="card-body">First, Second, Third, Finally가 있으면 순서가 명시적으로 드러난다. 이게 있으면 순서 문제가 가장 쉬워진다.</div>
+      <div class="card-ex">
+        <span class="hl hl-g">First</span>, … → <span class="hl hl-g">Second</span>, … → <span class="hl hl-g">Finally</span>, …
+        <div class="card-note">↑ 이 신호들이 순서를 직접 알려줌</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--violet)">④</div>
+      <div class="card-title">개념 도입 → this + Shell Noun</div>
+      <div class="card-body">한 단락이 개념을 도입하면, 다음 단락이 "this + Shell Noun"으로 그 개념 전체를 캡슐화한다.</div>
+      <div class="card-ex">
+        단락 A: [현상 설명] → 단락 B: "<span class="hl hl-v">This phenomenon</span> is explained by…"
+        <div class="card-note">↑ 개념 도입 → this 캡슐화 쌍</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--red)">⑤</div>
+      <div class="card-title">역접 연결사의 위치 규칙</div>
+      <div class="card-body">However / But로 시작하는 단락은 절대 첫 번째에 올 수 없다. 역접의 대상이 앞에 있어야 하기 때문이다.</div>
+      <div class="card-ex">
+        단락 C: "<span class="hl hl-r">However</span>, the data tell a different story."<br>
+        → 단락 C 앞 = 반대 주장·일반 통념 단락 필수
+        <div class="card-note">↑ However 단락 = 절대 첫 번째 아님</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--orange)">⑥</div>
+      <div class="card-title">대명사 they / it → 선행사</div>
+      <div class="card-body">단락이 they / it / them으로 시작하면, 그 대명사가 받는 명사·개념이 앞 단락에 있어야 한다.</div>
+      <div class="card-ex">
+        단락 D: "<span class="hl hl-o">They</span> were initially skeptical of the findings."<br>
+        → they = 앞 단락에 소개된 집단 (연구자들 등)
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--violet)"></div>
+    <div class="sec-title">순서 배열 풀이 절차 — 4단계</div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <b>주어진 첫 단락 분석:</b> 핵심 명사·개념을 확인. 특히 a/an + N으로 도입된 것을 메모.
+        <span class="step-sub">이것이 후속 단락의 지시어·the의 선행사가 됨</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <b>각 단락 첫 문장의 연결 표지 확인:</b> 지시어·the·Frame Marker·연결사를 모두 표시.
+        <span class="step-sub">지시어와 the만 찾아도 순서의 70%가 해결됨</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <b>선행사-지시어 쌍 매칭:</b> a+N → the+N / 개념 도입 → this+Shell Noun 쌍을 확정.
+        <span class="step-sub">내용이 아니라 결속 쌍을 찾는 것이 핵심. 의미 유사성에 현혹되지 말 것</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <b>전체 검증:</b> 확정된 순서대로 읽었을 때 모든 지시어의 선행사가 앞에 있는지 확인.
+        <span class="step-sub">하나라도 선행사가 없으면 순서가 틀린 것 → 재검토</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <b>최다 오류 ①:</b> 내용이 비슷하면 인접한다고 가정. 결속 관계가 없으면 아무리 내용이 비슷해도 인접하지 않는다.
+  </div>
+  <div class="callout warn">
+    <b>최다 오류 ②:</b> However로 시작하는 단락을 첫 번째로 배치. 역접의 대상이 앞에 있어야 하므로 절대 불가.
+  </div>
+
+  <div class="page-footer">
+    <span class="pf-left">PLA · 수능 영어 담화론 전략</span>
+    <span class="pf-right">05</span>
+  </div>
+</div>
+
+
+<!-- ══════════ PART 06 : 문장 삽입 ══════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-chapter">PART 06 · 문장 삽입</span>
+    <span class="page-num">06</span>
+  </div>
+
+  <div class="part-band">
+    <div class="part-num">06</div>
+    <div class="part-info">
+      <div class="part-tag">Sentence Insertion</div>
+      <div class="part-name">문장 삽입 — 삽입 전 + 삽입 후, 두 가지를 동시에 확인해라</div>
+      <div class="part-desc">순서 배열을 문장 단위로 압축한 것</div>
+    </div>
+  </div>
+
+  <p class="body-text">
+    삽입 문제의 원리는 순서 배열과 완전히 같다. 다만 단락이 아닌 문장 하나를 끼워 넣는 것이다.
+    삽입할 문장의 지시어·연결사가 앞 문장과 이어지고, 삽입 후 다음 문장의 지시어도 삽입 문장과 매끄럽게 연결되어야 한다.
+    <b>삽입 전·후 결속 관계 두 가지를 동시에 확인</b>하는 게 핵심이다.
+  </p>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--orange)"></div>
+    <div class="sec-title">삽입 문장 분석 — 4가지 결속 단서</div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-num" style="color:var(--orange)">①</div>
+      <div class="card-title">삽입문의 연결사 → 앞 문장의 역할 결정</div>
+      <div class="card-body">삽입문 첫 단어로 앞 문장이 무엇이어야 하는지가 결정된다.</div>
+      <div class="card-ex">
+        삽입문: "<span class="hl hl-r">However</span>, this assumption overlooks a key variable."<br>
+        → 앞 문장 = 그 assumption을 당연시하는 내용
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--orange)">②</div>
+      <div class="card-title">삽입문의 지시어 → 선행사 탐색</div>
+      <div class="card-body">this/that/the+N이 있으면 선행사가 바로 앞 문장에 있어야 한다.</div>
+      <div class="card-ex">
+        삽입문: "<span class="hl hl-o">This method</span> proved far more effective than expected."<br>
+        → 앞 문장 = method를 소개하는 문장
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--orange)">③</div>
+      <div class="card-title">삽입 후 → 뒤 문장 지시어 검증</div>
+      <div class="card-body">삽입 후 다음 문장의 this/that이 삽입 문장을 가리켜야 한다. 가리키지 않으면 위치 오류.</div>
+      <div class="card-ex">
+        삽입 후 다음 문장: "<span class="hl hl-o">Such a finding</span> challenged the prevailing model."<br>
+        → "finding" = 삽입문의 연구 결과를 받음 → 위치 확정
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num" style="color:var(--orange)">④</div>
+      <div class="card-title">삽입문 a/an 도입 → 뒤 the로 받음</div>
+      <div class="card-body">삽입문이 새 명사를 a+N으로 도입하면, 이후 문장이 the+N으로 받는다.</div>
+      <div class="card-ex">
+        삽입문: "Researchers developed <span class="hl hl-o">a new algorithm</span>."<br>
+        다음 문장: "<span class="hl hl-o">The algorithm</span> processed data 100× faster."<br>
+        → a → the 쌍 성립 = 삽입 위치 확정
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--orange)"></div>
+    <div class="sec-title">삽입 위치 확정 — 5단계</div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <b>삽입문 먼저 완전 분석:</b> ① 첫 단어 연결사 ② 지시어 ③ 도입 명사 ④ 담화 역할(주장/근거/예시/결론)
+        <span class="step-sub">삽입문 분석 = "이 문장 앞에 무엇이 와야 하는지" 자동 결정</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <b>본문에서 선행사 탐색:</b> 삽입문의 지시어가 가리키는 명사·개념이 처음 등장하는 위치 찾기.
+        <span class="step-sub">그 위치 바로 다음이 삽입 위치 후보 1순위</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <b>삽입 후 뒤 문장 검증:</b> 삽입 위치 이후 문장의 연결사·지시어가 삽입문과 연결되는지 확인.
+        <span class="step-sub">뒤 문장이 삽입문을 this/that으로 받으면 확정 / 어색하면 다음 위치 검토</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <b>흐름 단절 지점 탐색:</b> 본문을 읽다가 연결이 갑자기 끊어지는 지점 = 삽입 위치 후보.
+        <span class="step-sub">흐름 단절 = 결속 장치가 빠진 자리 = 삽입문이 그 결속을 채워야 하는 위치</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <b>최종 검증 — 전체 읽기:</b> 삽입 후 전체 단락을 읽어 모든 지시어의 선행사가 확보되는지 확인.
+        <span class="step-sub">한 군데가 어색하면 전체 순서가 틀린 것</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <b>삽입 최다 오류:</b> 삽입문의 주제가 위치 전후 내용과 관련이 있다는 이유만으로 위치를 결정. 결속 관계(지시어·연결사·the)가 성립하지 않으면 틀린 위치다. <b>주제 유사성이 아니라 결속 쌍이 기준</b>이다.
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--orange)"></div>
+    <div class="sec-title">실전 지문 분석</div>
+  </div>
+
+  <div class="passage">
+    <div class="passage-head">
+      <span class="passage-head-label">삽입 문제 실전 적용</span>
+      <span class="passage-head-title">삽입 위치 분석 연습</span>
+    </div>
+    <div class="passage-body">
+      <p style="font-size:12px;color:var(--ink3);font-family:'IBM Plex Mono',monospace;margin-bottom:12px">
+        삽입할 문장: "This gap, however, was not inevitable — it reflected deliberate policy choices."
+      </p>
+      <p class="passage-text">
+        ① Urban development throughout the twentieth century created enormous disparities between wealthy and poor districts.<br>
+        ② Affluent areas received investment in infrastructure, schools, and green space, while deprived communities were systematically excluded from planning decisions.<br>
+        ③ <span style="border:2px dashed var(--orange-bd);border-radius:3px;padding:2px 8px;color:var(--orange);font-size:12px;font-family:'IBM Plex Mono',monospace">[ 삽입 위치 ]</span><br>
+        ④ Recognising this, several cities have begun auditing historical planning records to identify and reverse discriminatory zoning.
+      </p>
+      <div class="passage-legend">
+        <span class="pl" style="background:var(--orange-bg);color:var(--orange);border:1px solid var(--orange-bd)">■ "This gap" → ②의 "disparities" = 선행사 확정</span>
+        <span class="pl" style="background:var(--red-bg);color:var(--red);border:1px solid var(--red-bd)">■ "however" → ②의 서술에서 반전 (불가피한 것이 아님)</span>
+        <span class="pl" style="background:var(--violet-bg);color:var(--violet);border:1px solid var(--violet-bd)">■ ④의 "this" → 삽입문 전체를 받음 → 위치 ③ 확정</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="pf-left">PLA · 수능 영어 담화론 전략</span>
+    <span class="pf-right">06</span>
+  </div>
+</div>
+
+
+<!-- ══════════ PART 07 : 통합 체크리스트 ══════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-chapter">PART 07 · 통합 체크리스트</span>
+    <span class="page-num">07</span>
+  </div>
+
+  <div class="part-band">
+    <div class="part-num">07</div>
+    <div class="part-info">
+      <div class="part-tag">Master Checklist</div>
+      <div class="part-name">시험장에서 꺼내 쓰는 최종 체크리스트</div>
+      <div class="part-desc">이걸 자동화할 때까지 반복하면 구조적으로 오답이 사라진다</div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--green)"></div>
+    <div class="sec-title">지문 읽기 공통 프로토콜 — 30~60초 스캔</div>
+  </div>
+
+  <div class="checklist">
+    <div class="check-label">▸ 문제 유형 관계없이 모든 지문에 적용</div>
+    <div class="check-item">
+      <span class="check-n" style="color:var(--green);font-family:'IBM Plex Mono',monospace;font-size:13px">S1</span>
+      <div><b>첫 문장:</b> 주제·요지 후보 가능성 확인 (가장 추상적·포괄적이면 주제문)
+        <span class="check-note">연역형 구조 = 첫 문장이 주제문</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-n" style="color:var(--green);font-family:'IBM Plex Mono',monospace;font-size:13px">S2</span>
+      <div><b>마지막 문장:</b> 결론 연결사(therefore / all of this) 또는 Booster 확인
+        <span class="check-note">귀납형 구조 = 마지막 문장이 주제문</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-n" style="color:var(--green);font-family:'IBM Plex Mono',monospace;font-size:13px">S3</span>
+      <div><b>역접 연결사:</b> However / But / Yet 위치 표시 — 이후가 핵심 주장일 가능성
+        <span class="check-note">역접 이후가 핵심인 역접형 구조 확인</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-n" style="color:var(--green);font-family:'IBM Plex Mono',monospace;font-size:13px">S4</span>
+      <div><b>this/that + Shell Noun:</b> 위치와 평가 방향(긍정·부정·중립) 메모
+        <span class="check-note">that+SN = 반박 대상, this+SN = 필자 관점으로 캡슐화</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-n" style="color:var(--green);font-family:'IBM Plex Mono',monospace;font-size:13px">S5</span>
+      <div><b>Boosters:</b> clearly / certainly / must — 이 단어가 붙은 문장 = 주장 1순위 후보
+        <span class="check-note">Booster 붙은 문장을 별도 표시해두면 주제·요지·빈칸 풀 때 바로 활용</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-n" style="color:var(--green);font-family:'IBM Plex Mono',monospace;font-size:13px">S6</span>
+      <div><b>예시 신호어:</b> for example / for instance — 예시 이전의 일반 진술이 핵심
+        <span class="check-note">예시가 있는 지문은 예시 직전 문장이 주제문 또는 빈칸 위치</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-n" style="color:var(--green);font-family:'IBM Plex Mono',monospace;font-size:13px">S7</span>
+      <div><b>지시어·a→the 쌍:</b> 순서·삽입 문제를 위한 결속 쌍 표시
+        <span class="check-note">a/an으로 도입된 명사와 그것을 받는 the를 짝지어 메모</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--green)"></div>
+    <div class="sec-title">유형별 최종 체크리스트</div>
+  </div>
+
+  <div class="matrix">
+    <div class="mx" style="border-left:3px solid var(--blue)">
+      <div class="mx-title" style="color:var(--blue)">주제·요지·주장</div>
+      <div class="mx-ko">Topic / Main Idea / Argument</div>
+      <div class="mx-body">
+        □ 결론 연결사 문장이 있는가?<br>
+        □ However 이후 문장을 확인했는가?<br>
+        □ Booster 붙은 문장을 찾았는가?<br>
+        □ this + Shell Noun의 평가 방향 파악?<br>
+        □ 선택한 요지가 예시 문장이 아닌가?<br>
+        □ that + Shell Noun = 반박 대상임을 인지?
+      </div>
+    </div>
+    <div class="mx" style="border-left:3px solid var(--red)">
+      <div class="mx-title" style="color:var(--red)">제목</div>
+      <div class="mx-ko">Title</div>
+      <div class="mx-body">
+        □ 주제문을 먼저 확정했는가?<br>
+        □ Shell Noun 평가 방향이 제목 어조와 일치?<br>
+        □ Attitude Marker의 감정 방향이 제목에 반영?<br>
+        □ 제목이 지엽적 예시가 아닌 전체 포괄?<br>
+        □ 제목의 수사 패턴이 지문 구조와 일치?
+      </div>
+    </div>
+    <div class="mx" style="border-left:3px solid var(--gold)">
+      <div class="mx-title" style="color:var(--gold)">빈칸 추론</div>
+      <div class="mx-ko">Gap-fill Inference</div>
+      <div class="mx-body">
+        □ 빈칸 문법적 위치 확인?<br>
+        □ 빈칸 바로 앞 연결사로 논리 방향 결정?<br>
+        □ 빈칸이 Shell Noun 자리인지 확인?<br>
+        □ 빈칸 이후 for example → 빈칸 = 일반 진술?<br>
+        □ 지문 단어 그대로인 선지 = 함정 의심?<br>
+        □ 선지 대입 후 앞뒤 논리 방향 검증?
+      </div>
+    </div>
+    <div class="mx" style="border-left:3px solid var(--violet)">
+      <div class="mx-title" style="color:var(--violet)">순서 배열</div>
+      <div class="mx-ko">Paragraph Ordering</div>
+      <div class="mx-body">
+        □ 주어진 단락에서 도입 명사(a/an+N) 표시?<br>
+        □ 각 단락 첫 문장의 지시어·the 표시?<br>
+        □ 선행사-지시어 쌍 매칭 완료?<br>
+        □ a → the 2nd mention 쌍 확인?<br>
+        □ However 시작 단락 = 절대 첫 번째 아님?<br>
+        □ Frame Marker 순서 활용?
+      </div>
+    </div>
+    <div class="mx" style="border-left:3px solid var(--orange)">
+      <div class="mx-title" style="color:var(--orange)">문장 삽입</div>
+      <div class="mx-ko">Sentence Insertion</div>
+      <div class="mx-body">
+        □ 삽입문의 연결사·지시어·a/an+N 분석?<br>
+        □ 삽입문 지시어의 선행사 위치 확인?<br>
+        □ 삽입 후 뒤 문장이 삽입문을 this/that으로 받는지?<br>
+        □ 결속 쌍(a→the / 도입→this+SN) 성립?<br>
+        □ 내용 유사성이 아닌 결속 관계가 기준?
+      </div>
+    </div>
+    <div class="mx" style="border-left:3px solid var(--red)">
+      <div class="mx-title" style="color:var(--red)">오답 최종 제거</div>
+      <div class="mx-ko">Final Elimination</div>
+      <div class="mx-body">
+        □ 예시 문장이 주제·요지 선지?<br>
+        □ 양보절 내용이 주장 선지?<br>
+        □ that+SN의 반박 대상이 정답 선지?<br>
+        □ 지문 단어 반복 선지가 빈칸 정답?<br>
+        □ 내용 유사성만으로 순서·삽입 위치 선택?
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="sec-head">
+    <div class="sec-mark" style="background:var(--ink)"></div>
+    <div class="sec-title">PLA 이론 → 이 전략 연결 최종 요약</div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="final">
+      <thead>
+        <tr><th>PLA PART</th><th>핵심 이론</th><th>적용 문제 유형</th><th>핵심 도구</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color:var(--teal);font-family:'IBM Plex Mono',monospace;font-weight:700">PART 01<br><span style="color:var(--ink3);font-weight:400">결속 장치</span></td>
+          <td>Reference · Substitution · Lexical Cohesion</td>
+          <td>순서 배열, 문장 삽입</td>
+          <td>this/that/it, the(2nd mention), 어휘 사슬</td>
+        </tr>
+        <tr>
+          <td style="color:var(--blue);font-family:'IBM Plex Mono',monospace;font-weight:700">PART 02<br><span style="color:var(--ink3);font-weight:400">Shell Noun</span></td>
+          <td>this/that + 평가 명사의 캡슐화</td>
+          <td>주제·요지·제목·빈칸</td>
+          <td>problem/shift/insight의 평가 방향</td>
+        </tr>
+        <tr>
+          <td style="color:var(--red);font-family:'IBM Plex Mono',monospace;font-weight:700">PART 03<br><span style="color:var(--ink3);font-weight:400">연결사 흐름</span></td>
+          <td>대조·인과·예시·양보의 논리 방향</td>
+          <td>빈칸 추론, 순서 배열</td>
+          <td>However/Therefore/For example/Although</td>
+        </tr>
+        <tr>
+          <td style="color:var(--gold);font-family:'IBM Plex Mono',monospace;font-weight:700">PART 04<br><span style="color:var(--ink3);font-weight:400">글의 구조</span></td>
+          <td>Claim → Support → Conclusion 패턴</td>
+          <td>주제·요지·주장, 제목</td>
+          <td>Frame Markers, 연역/귀납/역접 구조</td>
+        </tr>
+        <tr>
+          <td style="color:var(--violet);font-family:'IBM Plex Mono',monospace;font-weight:700">PART 05<br><span style="color:var(--ink3);font-weight:400">수사적 장치</span></td>
+          <td>Hedges · Boosters · Attitude · Engagement</td>
+          <td>주장, 제목, 빈칸</td>
+          <td>clearly/unfortunately/note that</td>
+        </tr>
+        <tr style="background:var(--ink)">
+          <td style="color:#c8a96a;font-family:'IBM Plex Mono',monospace;font-weight:700;background:var(--ink)">담화론 통합<br><span style="color:rgba(255,255,255,.4);font-weight:400">이 자료</span></td>
+          <td style="background:var(--ink);color:rgba(255,255,255,.7)">위 5가지 이론의 수능 문제 유형별 직결 적용</td>
+          <td style="background:var(--ink);color:rgba(255,255,255,.7)">전 유형</td>
+          <td style="background:var(--ink);color:rgba(255,255,255,.7)">7초 스캔 → 유형별 체크리스트 → 결속 쌍 매칭</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout tip">
+    <b>최종 원칙:</b> 수능 영어 독해는 "영어 실력"이 아니라 "담화 구조 해석 능력"을 시험한다. 모르는 단어가 있어도 <b>this · that · however · therefore · clearly · unfortunately</b> 같은 구조 표지만 정확히 읽으면 정답 위치를 논리적으로 좁힐 수 있다. 이것이 PLA 담화론 접근법의 핵심이다.
+  </div>
+
+  <div class="page-footer">
+    <span class="pf-left">PLA · 수능 영어 담화론 전략</span>
+    <span class="pf-right">07</span>
+  </div>
+</div>
+
+</div><!-- /book -->
+</body>
+</html>
